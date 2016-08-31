@@ -1,4 +1,5 @@
 class ParamsGamesController < ApplicationController
+# query string params i.e. http://localhost:3000/name?response=Nate
   def name_game
     @response = params[:response].upcase
   end
@@ -19,6 +20,7 @@ class ParamsGamesController < ApplicationController
     @wrong_message = "Sorry try again"
   end
 
+# url segment params i.e. http://localhost:3000/guess_number/69
   def url_guess
     response = params[:turkey].to_i
     answer = 69
@@ -32,5 +34,12 @@ class ParamsGamesController < ApplicationController
     elsif response < answer
       @message = "Guess higher."
     end
+  end
+# form params
+  def get_form
+  end
+
+  def send_form
+    @message = params[:message]
   end
 end
