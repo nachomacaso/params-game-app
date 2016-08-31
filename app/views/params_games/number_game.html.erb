@@ -1,0 +1,8 @@
+<h1>Guess a number between 1-100</h1>
+<h3><% if @response.to_i == @answer %>
+  <%= @right_message %>
+<% else %>
+  <%= @wrong_message %>
+  <% @counter += 1 %>
+<% end %></h3>
+<h2>It took you <%=@counter %> tries!</h2>
