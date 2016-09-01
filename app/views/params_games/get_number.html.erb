@@ -1,0 +1,11 @@
+<h1>Please guess a number form</h1>
+
+<%= form_tag '/send_number', method: :post do %>
+  <div>
+     <%= label_tag :number, 'Enter a number' %>
+     <%= text_field_tag :number, nil, placeholder: "between 1 - 100" %>
+  </div>
+  <div>
+    <%= submit_tag 'Guess number' %>
+  </div>
+<% end %>

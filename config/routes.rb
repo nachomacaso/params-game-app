@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/guess_number/:turkey' => 'params_games#url_guess'
   get '/show_form' => 'params_games#get_form'
   post '/send_form' => 'params_games#send_form'
+  get '/show_number' => 'params_games#get_number'
+  post '/send_number' => 'params_games#send_number'
 end

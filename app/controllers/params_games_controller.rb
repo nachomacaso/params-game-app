@@ -42,4 +42,23 @@ class ParamsGamesController < ApplicationController
   def send_form
     @message = params[:message]
   end
+
+  def get_number
+
+  end
+
+  def send_number
+    response = params[:number].to_i
+    answer = 69
+
+    if response == answer
+      @message = "You got it correct!"
+    elsif response < 1 || response > 100
+      @message = "You are out of bounds."
+    elsif response > answer
+      @message = "Guess lower."
+    elsif response < answer
+      @message = "Guess higher."
+    end
+  end
 end
