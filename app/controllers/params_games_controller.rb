@@ -61,4 +61,9 @@ class ParamsGamesController < ApplicationController
       @message = "Guess higher."
     end
   end
+
+  def add_count
+    @count = params[:count].to_i
+    @count_plus_one = @count + 1
+  end
 end

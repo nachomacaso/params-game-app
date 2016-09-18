@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post '/send_form' => 'params_games#send_form'
   get '/show_number' => 'params_games#get_number'
   post '/send_number' => 'params_games#send_number'
+  get 'count' => 'params_games#add_count'
 end
